@@ -1,0 +1,64 @@
+.container {
+  position: relative;
+}
+
+.hero {
+  height: 50vh;
+  background-image: url("../../assets/FondoHome.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
+
+  /* Animación */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideFadeIn 1.5s ease-out forwards;
+}
+
+.fotoPerfil {
+  width: 190px;             
+  height: 190px;
+  border-radius: 50%;       
+  border: 2.5px solid #016B61; 
+  object-fit: cover;        /* Ajuste limpio */
+
+  position: absolute;
+  top: 33vh;                /* Mueve la imagen en Y */
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: white;        
+  z-index: 10;              /* Para que esté encima de todo */
+
+}
+
+.content {
+  padding: 73px;
+  background-color: white;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Comienza un poco hacia abajo */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Termina en su lugar natural */
+  }
+}
+

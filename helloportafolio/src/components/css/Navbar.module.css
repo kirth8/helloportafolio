@@ -1,19 +1,21 @@
 .container {
-  background-color: #6d0000a2;
+  background-color: #6d000000;
   padding: 12px 25px;
   display: flex;
-  justify-content: center;
+  justify-content: right;
   gap: 30px;
-  border-bottom: 2px solid #00ffcc;
+  border-bottom: 2.5px solid #016B61;
+  /* text-align: right; */
 }
 
 .link {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .link:hover {
-  color: #ffdf51;
+  color: #70B2B2;
+  
 }

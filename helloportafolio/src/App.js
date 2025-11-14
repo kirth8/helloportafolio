@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
+// import Contact from "./pages/Contact";
 import styles from "./App.module.css";
 
 export default function App() {
@@ -13,9 +13,10 @@ export default function App() {
       <div className={styles.container}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/projects" element={<Projects />} />
+          
+          {/* <Route path="/contact" element={<Contact />} /> */}
         </Routes>
       </div>
     </Router>

@@ -1,5 +1,5 @@
 .container {
-  background-color: #6d000000;
+  background: #e5e9c521;
   padding: 12px 25px;
   display: flex;
   justify-content: right;
@@ -7,9 +7,9 @@
   border-bottom: 2.5px solid #016B61;
 
   position: sticky;   /* Se queda pegado al hacer scroll */
-  top: 0;             /* Pegado a la parte superior */
+  top: 0;             
   z-index: 1000;      /* Asegura que quede encima de todo */
-  backdrop-filter: blur(10px); /* opcional: efecto vidrio elegante */
+  backdrop-filter: blur(10px); /* efecto vidrio */
 }
 
 .link {

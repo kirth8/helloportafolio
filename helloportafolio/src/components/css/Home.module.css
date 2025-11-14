@@ -71,16 +71,16 @@
 
 /* Cuadrícula */
 .gridHabilidades {
-  display: grid;               /* Activa el sistema Grid */
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  display: grid;  
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;                   /* Espacio entre las cajas */
-  max-width: 1000px;            /* Ancho máximo */
-  margin: 0 auto;              /* Centrar en pantalla */
+  max-width: 1000px;
+  margin: 0 auto;              /* Centrar  */
 }
 
 .skill {
   padding: 15px;
-  background: #f0f0f0;         
+  background: #E5E9C5;         
   border-radius: 10px;         
   font-weight: bold;
   color: #333;
@@ -90,7 +90,7 @@
 
 .skill:hover {
   transform: scale(1.05);      /* Se agranda un poquito */
-  background: #e0e0e0;
+  background: #70B2B2;
 }
 
 .skill img {
@@ -104,6 +104,66 @@
   font-weight: bold;
 }
 
+.footer {
+  background: #E5E9C5;
+  padding: 25px 40px;
+
+  display: flex;
+  justify-content: space-between; /* 3 columnas */
+  align-items: center;
+
+  border-top: 3px solid #016B61;
+  margin-top: 60px;
+}
+
+.footer img {
+  width: 30px;              /* Tamaño de iconos */
+  height: 30px;
+  margin: 0 10px;
+  transition: transform 0.2s ease;
+}
+
+.footer img:hover {
+  transform: scale(1.15);   /* Animación */
+}
+
+.footerCenter {
+  display: flex;
+  align-items: center;
+}
+
+.footerLeft,
+.footerRight {
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.cvButton {
+  background-color: #016B61;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;              /* <— Para alinear icono y texto */
+  align-items: center;               /* Centra verticalmente */
+  gap: 1px;                          /* Espacio entre icono y texto */
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.cvButton:hover {
+  background-color: #70B2B2;
+  transform: scale(1.05);
+}
+
+.pdfIcon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  object-fit: contain;
+}
+
 @keyframes slideFadeIn {
   0% {
     opacity: 0;
@@ -114,4 +174,3 @@
     transform: translateY(0); 
   }
 }
-

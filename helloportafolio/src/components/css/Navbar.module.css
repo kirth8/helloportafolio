@@ -5,7 +5,11 @@
   justify-content: right;
   gap: 30px;
   border-bottom: 2.5px solid #016B61;
-  /* text-align: right; */
+
+  position: sticky;   /* Se queda pegado al hacer scroll */
+  top: 0;             /* Pegado a la parte superior */
+  z-index: 1000;      /* Asegura que quede encima de todo */
+  backdrop-filter: blur(10px); /* opcional: efecto vidrio elegante */
 }
 
 .link {

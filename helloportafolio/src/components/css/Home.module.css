@@ -8,6 +8,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
 
   display: flex;
   align-items: center;
@@ -27,6 +28,7 @@
   animation: slideFadeIn 1.5s ease-out forwards;
 }
 
+
 .fotoPerfil {
   width: 190px;             
   height: 190px;
@@ -35,8 +37,9 @@
   object-fit: cover;        /* Ajuste limpio */
 
   position: absolute;
-  top: 33vh;                /* Mueve la imagen en Y */
+  /*top: 33vh;                /* Mueve la imagen en Y */
   left: 50%;
+  bottom: -95px;         /* La mitad de la imagen baja a la parte blanca */
   transform: translateX(-50%);
 
   background: white;        
@@ -45,20 +48,70 @@
 }
 
 .content {
-  padding: 73px;
-  background-color: white;
-  color: #333;
+  /* padding: 40px;
+  padding-top: 7%; */
+  padding: 95px 90px 20px;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
   font-size: 1.2rem;
+}
+
+.habilidades {
+  padding: 10px;
+  background: white;
+  text-align: center;
+}
+
+
+.habilidades h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Cuadrícula */
+.gridHabilidades {
+  display: grid;               /* Activa el sistema Grid */
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  gap: 20px;                   /* Espacio entre las cajas */
+  max-width: 1000px;            /* Ancho máximo */
+  margin: 0 auto;              /* Centrar en pantalla */
+}
+
+.skill {
+  padding: 15px;
+  background: #d3d3d3;        
+  border-radius: 10px;         
+  font-weight: bold;
+  color: #333;
+  transition: transform 0.3s ease; 
+}
+
+
+.skill:hover {
+  transform: scale(1.05);      /* Se agranda un poquito */
+  background: #e0e0e0;
+}
+
+.skill img {
+  width: 60px;                       /* Tamaño del icono */
+  height: 60px;
+  margin-bottom: 10px;               /* Espacio entre icono y texto */
+}
+
+.skill p {
+  margin: 0;
+  font-weight: bold;
 }
 
 @keyframes slideFadeIn {
   0% {
     opacity: 0;
-    transform: translateY(-20px); /* Comienza un poco hacia abajo */
+    transform: translateY(-20px); 
   }
   100% {
     opacity: 1;
-    transform: translateY(0); /* Termina en su lugar natural */
+    transform: translateY(0); 
   }
 }
 

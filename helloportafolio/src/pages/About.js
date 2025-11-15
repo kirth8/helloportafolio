@@ -1,83 +1,109 @@
-import styles from "../components/css/About.module.css"
+import React from "react";
+import styles from "../components/css/About.module.css";
+import miFoto from "../assets/perfil2.jpeg";
 
 export default function About() {
-  return (<div className={styles.container}>
-      
-      <h1 className={styles.title}>Sobre mí</h1>
+  return (
+    <div className={styles.container}>
 
-      <section className={styles.section}>
-        {/* <h2>Sobre mí</h2> */}
-        <p>
-          Soy un desarrollador con formación en Ciencias de la Computación,
-          orientado al desarrollo web, machine learning y videojuegos con C# y Godot.
-        </p>
-      </section>
+      <div className={styles.inner}>
+        {/* Texto a la izquierda */}
+        <div className={styles.text}>
+          <h1 className={styles.title}>Sobre mí</h1>
+          <p className={styles.paragraph}>
+            Soy un desarrollador con base en Ciencias de la Computación, apasionado
+            por resolver problemas usando tecnologías modernas. Tengo experiencia 
+            construyendo plataformas web utilizando Node.js, Flask, Django, y
+            trabajando con modelos de machine learning multimodales como Paligemma.
 
-      <section className={styles.grid}>
-        
-        <div className={styles.card}>
-          <h3>Habilidades Técnicas</h3>
-          <ul>
-            <li>JavaScript, Node.js</li>
-            <li>Django, Python</li>
-            <li>C# (en aprendizaje)</li>
-            <li>Godot — Android</li>
-            <li>Git, Linux, APIs REST</li>
-            <li>Machine Learning multimodal</li>
-          </ul>
+            Actualmente estoy aprendiendo C# y explorando el desarrollo de videojuegos
+            con Godot, con el objetivo de construir juegos como parte de mi 
+            crecimiento profesional.
+          </p>
         </div>
 
-        <div className={styles.card}>
-          <h3>Idiomas</h3>
-          <ul>
-            <li>Español — Nativo</li>
-            <li>Inglés — Intermedio</li>
-          </ul>
-        </div>
+        {/* Separador central con ">" */}
+        <div className={styles.separator}>{'>'}</div>
 
-        <div className={styles.card}>
-          <h3>Habilidades Blandas</h3>
-          <ul>
-            <li>Resolución de problemas</li>
-            <li>Comunicación clara</li>
-            <li>Adaptabilidad</li>
-            <li>Pensamiento analítico</li>
-          </ul>
-        </div>
 
-        <div className={styles.card}>
-          <h3>Hobbies</h3>
-          <ul>
-            <li>Videojuegos</li>
-            <li>Crear proyectos personales</li>
-            <li>Leer y aprender</li>
-          </ul>
+        {/* Imagen a la derecha */}
+        <div className={styles.imageWrap}>
+          <img src={miFoto} alt="perfil2" className={styles.image} />
         </div>
+      </div>
 
-        <div className={styles.card}>
-          <h3>Experiencia</h3>
-          <ul>
-            <li>Desarrollo web con JavaScript y Node.js</li>
-            <li>Trabajo con modelos multimodales (Paligemma)</li>
-            <li>Automatización y análisis de datos</li>
-            <li>Videojuegos en Godot</li>
-          </ul>
-        </div>
+<section className={styles.skillsContainer}>
+  
+  {/* Habilidades Técnicas */}
+  <div className={`${styles.skillsGroup} ${styles.rightSkills}`}>
+    <h2 className={styles.groupTitle}>Habilidades Técnicas</h2>
 
-        <div className={styles.card}>
-          <h3>Formación</h3>
-          <p>Ingeniería en Ciencias de la Computación — UNL</p>
-        </div>
+    <div className={styles.hand}>
+      <div className={styles.card} style={{ "--i": 0 }}>Frontend: JavaScript, React</div>
+      <div className={styles.card} style={{ "--i": 1 }}>Backend: Node.js, Django, Flask</div>
+      <div className={styles.card} style={{ "--i": 2 }}>Bases de datos: MySQL, MongoDB</div>
+      <div className={styles.card} style={{ "--i": 3 }}>Git, Linux, APIs REST</div>
+      <div className={styles.card} style={{ "--i": 4 }}>C#, Godot — Android</div>
+    </div>
+  </div>
 
-        <div className={styles.card}>
-          <h3>Certificaciones</h3>
-          <ul>
-            <li>C# y .NET — Microsoft Learn</li>
-            <li>Fundamentos de Programación</li>
-          </ul>
-        </div>
+  {/* Habilidades Blandas */}
+  <div className={`${styles.skillsGroup} ${styles.leftSkills}`}>
+    <h2 className={styles.groupTitle}>Habilidades Blandas</h2>
 
-      </section>
+    <div className={styles.hand}>
+      <div className={styles.card} style={{ "--i": 0 }}>Resolución de problemas</div>
+      <div className={styles.card} style={{ "--i": 1 }}>Trabajo en equipo</div>
+      <div className={styles.card} style={{ "--i": 3 }}>Adaptabilidad</div>
+      <div className={styles.card} style={{ "--i": 4 }}>Gestión del tiempo</div>
+      <div className={styles.card} style={{ "--i": 5 }}>Pensamiento analítico</div>
+    </div>
+  </div>
+
+</section>
+
+Idiomas
+
+Español — Nativo
+
+Inglés — Intermedio (lectura técnica sólida)
+
+Hobbies
+
+Aprender nuevas tecnologías
+
+Videojuegos
+
+Crear prototipos y proyectos personales
+
+Lectura y estudio autodidacta
+
+Experiencia
+
+Desarrollo de plataformas web con JavaScript y Node.js
+
+Trabajo con modelos multimodales como Paligemma para procesamiento de documentos
+
+Automatización y análisis de datos
+
+Proyectos personales de videojuegos en Godot
+
+(Puedes expandir esto si has tenido trabajos formales o freelance.)
+
+Formación
+
+Ingeniería en Ciencias de la Computación
+Universidad Nacional de Loja
+
+Certificaciones
+
+Cursos de C# y .NET — Microsoft Learn
+
+Fundamentos de programación
+
+Conceptos de Machine Learning (varios cursos y lecturas)
+(Puedes agregar más si los tienes.)
+      {/* aquí puedes mantener las cards o seguir debajo */}
     </div>
   );
 }

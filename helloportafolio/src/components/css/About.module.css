@@ -1,58 +1,177 @@
 .container {
-  padding: 40px;
-  background: #ffffff;
-  color: #000;
-  width: 100%;
-  min-height: 100vh;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 15px 20px;
 }
 
-.title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  border-bottom: 3px solid #016B61;
-  padding-bottom: 10px;
-  width: fit-content;
-  margin-bottom: 30px;
-}
-
-.section {
-  margin-bottom: 30px;
-}
-
-.section p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+/* Layout principal: texto | separador | imagen */
+.inner {
+  display: flex;
+  align-items: center;
   gap: 20px;
 }
 
-.card {
-  background: #f0f9f9;
-  padding: 20px;
+/* columna de texto (izquierda) */
+.text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+/* título */
+.title {
+  font-size: 2.4rem;
+  color: #016B61;
+  margin: 0 0 12px 0;
+}
+
+/* párrafo corto */
+.paragraph {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0;
+}
+
+/* separador central */
+.separator {
+  font-size: 8rem;          /* tamaño */
+  color: #016B61;           
+  font-weight: 900;        
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* font-weight: 200;  */
+  transform: scaleX(0.3) scaleY(1.4);
+
+
+  
+  line-height: 6rem;        
+  margin: 0 30px;           /* separación entre texto e imagen */
+}
+
+
+
+/* contenedor de la imagen (derecha) */
+.imageWrap {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* imagen con estilo */
+.image {
+  width: 400px;
+  max-width: 100%;
   border-radius: 12px;
-  border-left: 5px solid #016B61;
-  box-shadow: 0 2px 8px #00000015;
-  transition: transform 0.2s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.356);
+  object-fit: cover;
+  display: block;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.skillsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 40px;
 }
 
-.card h3 {
+/* Títulos */
+.groupTitle {
+  text-align: center;
+  color: #016B61;
   margin-bottom: 10px;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding-bottom: 30px;
 }
 
-.card ul {
-  padding-left: 20px;
-  line-height: 1.6;
+/* Contenedor estilo "mano de cartas" */
+.hand {
+  display: inline-grid;
+  counter-set: card 0;
+  grid-template-columns: repeat(var(--count, 5), 0);
+  gap: 7px;
+  transition: 250ms ease-out;
+  margin: 0 auto;
 }
 
-.card p {
-  line-height: 1.6;
+/* Estado al pasar mouse: se abren */
+.skillsGroup:hover .hand {
+  grid-template-columns: repeat(var(--count, 5), 100px);
+  gap: 0px;
+}
+
+.rightSkills {
+  transform: translateX(15px); 
+}
+
+.leftSkills {
+  transform: translateX(-55px);
+}
+
+/* Cada carta */
+.card {
+  position: relative;
+  counter-increment: card;
+  height: 170px;
+  width: 150px;
+  padding: 15px;
+
+  border-radius: 10px;
+  border: 2px solid #016B61;
+  background: #E5E9C5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+  transform-origin: bottom center;
+  transform: rotate(calc((var(--i) * 12deg) - 24deg));
+
+  transition: 250ms ease-out;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Al pasar el mouse sobre una carta, se endereza y se mueve */
+.skillsGroup:hover .card:hover {
+  transform: rotate(0deg) translateY(-12px);
+  background: #f1fffb;
+  border-color: #019b8a;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Versión responsive */
+@media (max-width: 900px) {
+  .skillsContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* RESPONSIVE: apilar en móvil */
+@media (max-width: 768px) {
+  .inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .separator {
+    display: none; /* en móvil ocultamos el separador */
+  }
+
+  .text {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .image {
+    margin-top: 18px;
+    width: 260px;
+  }
 }

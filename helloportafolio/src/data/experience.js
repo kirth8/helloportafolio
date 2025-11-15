@@ -1,5 +1,3 @@
-// src/data/experiences.js
-
 const experiences = [
   {
     title: "CARSAT Rastreo Satelital",
@@ -27,15 +25,15 @@ const experiences = [
     image: "img/JetsonNano.jpg"
   },
   {
-    title: "UNL - Artículo Científico",
-    role: "Desarrollador de Deep Learning & Computer Vision",
+    title: "UNIVERSIDAD TÉCNICA PARTICULAR DE LOJA (UTPL)",
+    role: "Desarrollador de Deep Learning, Computer Vision y Web",
     location: "Loja, Ecuador",
-    date: "06/2024 - 08/2024",
+    date: "06/2023 - 01/2024",
     description: [
-      "Implementé una solución de accesibilidad para personas con discapacidad visual.",
-      "Configuré un dispositivo NVIDIA Jetson Nano para inferencia de deep learning.",
-      "Evalué modelos multimodales (Florence 2, Paligemma, Chameleon).",
-      "Desarrollé una API REST con Paligemma y un frontend accesible con Flask."
+      "Se implemento una solución de accesibilidad para las personas con discapacidad auditiva.",
+      "Se creo un modelo de Computer Vision manejando CNN para la detección de manos y salida de texto.",
+      "Se creo una plataforma web con Flask para la implementación del modelo creado.",
+      "Se obtuvo el primer lugar en II Convocatoria de Retos de Innovación Abierta Ecuador Sustentable 2030 "
     ],
     image: "img/Manjilu.jpeg"
   },

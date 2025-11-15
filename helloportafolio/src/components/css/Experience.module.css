@@ -87,7 +87,7 @@
 /* tarjeta */
 .content {
   background: rgba(255,255,255,0.88);
-  border-left: 4px solid #ffffff;
+  border-left: 4px solid #757575;
   border-radius: 10px;
   padding: 18px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -109,12 +109,48 @@
 }
 
 /* tipografía */
-.content h3 { margin: 0 0 6px; font-size: 1.15rem; color: #013d38; }
-.content h4 { margin: 4px 0; font-size: 0.98rem; color: #016B61; }
-.meta { font-size: 0.85rem; margin-bottom: 10px; opacity: 0.85; }
+.content h3 { 
+  margin: 0 0 6px; 
+  font-size: 1.15rem; 
+  color: #013d38; 
+}
 
-.content ul { padding-left: 18px; margin: 6px 0 0; }
-.content li { margin-bottom: 6px; font-size: 0.95rem; }
+.content h4 { 
+  margin: 4px 0; 
+  font-size: 0.98rem; 
+  color: #016B61; 
+}
+
+.meta { 
+  font-size: 0.85rem; 
+  margin-bottom: 10px; 
+  opacity: 0.85; 
+}
+
+.content ul { 
+  padding-left: 18px; 
+  margin: 6px 0 0; 
+  list-style: none;
+  text-align: justify;
+}
+
+.content li { 
+  margin-bottom: 6px; 
+  font-size: 0.95rem; 
+}
+
+/* COLORES INTERCALADOS PARA LAS VIÑETAS */
+.content ul li:nth-child(odd) {
+  background: #e9fdf9;   /* verde muy claro */
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.content ul li:nth-child(even) {
+  background: #f2f2f2;   /* gris claro */
+  padding: 6px 10px;
+  border-radius: 6px;
+}
 
 /* Responsive */
 @media (max-width: 900px) {

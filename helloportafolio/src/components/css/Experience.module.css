@@ -1,6 +1,20 @@
 .timelineSection {
   width: 100%;
+  /* padding: 70px 0; */
   padding: 70px 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  transition: background-image 0.6s ease;
+}
+
+/* capa oscura para legibilidad */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
 }
 
 .title {
@@ -8,7 +22,9 @@
   font-size: 2.2rem;
   margin-bottom: 50px;
   font-weight: 700;
-  color: #016B61;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
 }
 
 /* contenedor de la línea */
@@ -17,7 +33,8 @@
   width: 90%;
   max-width: 1100px;
   margin: auto;
-  padding: 20px 0;
+  padding: 120px 0;
+  z-index: 2;
 }
 
 /* línea central */
@@ -27,7 +44,7 @@
   left: 50%;
   width: 4px;
   height: 100%;
-  background: #016B61;
+  background: #ffffff;
   transform: translateX(-50%);
   top: 0;
 }
@@ -40,51 +57,55 @@
   padding: 10px 20px;
 }
 
-/* izquierda: ocupa la mitad izquierda (flow normal) */
 .left {
-  margin-left: 0;
-  padding-right: 40px;       /* separa carilla de la línea */
-  text-align: right;         /* texto alineado a la derecha */
+  padding-right: 40px;
+  text-align: right;
 }
 
-/* derecha: empuja el bloque a la mitad derecha */
 .right {
   margin-left: 50%;
-  padding-left: 40px;        /* separa carilla de la línea */
+  padding-left: 40px;
   text-align: left;
 }
 
-/* punto circular en la linea (posicionado respecto al item) */
+/* punto circular en la línea */
 .dot {
   position: absolute;
-  top: 24px;                 /* ajusta verticalmente según contenido */
+  top: 40px;
   width: 20px;
   height: 20px;
   background: white;
-  border: 3px solid #016B61;
+  border: 3px solid #ffffff;
   border-radius: 50%;
-  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  z-index: 3;
 }
 
-/* dot para left: situarlo al borde derecho del bloque */
-.left .dot {
-  right: -10px;              /* queda justo sobre la línea central */
-}
+.left .dot { right: -10px; }
+.right .dot { left: -10px; }
 
-/* dot para right: situarlo al borde izquierdo del bloque */
-.right .dot {
-  left: -10px;
-}
-
-/* tarjeta de contenido */
+/* tarjeta */
 .content {
-  background: #E6F7F5;
-  border-left: 4px solid #016B61;
+  background: rgba(255,255,255,0.88);
+  border-left: 4px solid #ffffff;
   border-radius: 10px;
   padding: 18px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   display: inline-block;
   max-width: calc(100% - 60px);
+  backdrop-filter: blur(4px);
+}
+
+/* IMAGEN GRANDE */
+.bigImage {
+  width: 375px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 15px;
+  border: 3px solid white;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
 /* tipografía */
@@ -92,21 +113,10 @@
 .content h4 { margin: 4px 0; font-size: 0.98rem; color: #016B61; }
 .meta { font-size: 0.85rem; margin-bottom: 10px; opacity: 0.85; }
 
-/* imagen pequeña dentro del contenido */
-.image {
-  width: 64px;
-  height: 64px;
-  object-fit: cover;
-  border-radius: 8px;
-  display: block;
-  margin-bottom: 10px;
-}
-
-/* lista */
 .content ul { padding-left: 18px; margin: 6px 0 0; }
 .content li { margin-bottom: 6px; font-size: 0.95rem; }
 
-/* responsive: apilar todo en móvil */
+/* Responsive */
 @media (max-width: 900px) {
   .timeline::before { left: 20px; }
   .item { width: 100%; margin-left: 0 !important; padding-left: 48px; padding-right: 24px; text-align: left !important; }

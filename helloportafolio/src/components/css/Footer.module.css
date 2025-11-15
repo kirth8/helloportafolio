@@ -4,8 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 3px solid #016B61;
-  margin-top: 60px;
+  border-top: 2.5px solid #016B61;
+  margin-top: 0px;
 }
 
 .footer img {

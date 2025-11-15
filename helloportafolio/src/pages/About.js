@@ -34,7 +34,6 @@ export default function About() {
 
 <section className={styles.skillsContainer}>
   
-  {/* Habilidades Técnicas */}
   <div className={`${styles.skillsGroup} ${styles.rightSkills}`}>
     <h2 className={styles.groupTitle}>Habilidades Técnicas</h2>
 
@@ -47,7 +46,6 @@ export default function About() {
     </div>
   </div>
 
-  {/* Habilidades Blandas */}
   <div className={`${styles.skillsGroup} ${styles.leftSkills}`}>
     <h2 className={styles.groupTitle}>Habilidades Blandas</h2>
 
@@ -62,48 +60,45 @@ export default function About() {
 
 </section>
 
-Idiomas
+<section className={styles.infoSection}>
 
-Español — Nativo
+  <div className={styles.infoCard}>
+    
 
-Inglés — Intermedio (lectura técnica sólida)
+    <h3>Formación</h3>
+    <ul>
+      <li>Ingeniería en Ciencias de la Computación — UNL</li>
+      <li>Bachiller en Ciencias - UE Juan XXIII</li>
+    </ul>
+    <h3>Certificaciones</h3>
+    <ul>
+      <li>Domina la IA con Gemini - Google Skillshop</li>
+      <li>Cloud Computing - Google Activate</li>
+      <li>IoT Fundamentals: Big Data & Analytics - Cisco Networking Academy</li>
+      <li>Inteligencia Artificial y Data - IA Network</li>
+      <li>Introduction to Packet Tracer - Cisco Networking Academy</li>
+    </ul>
+  </div>
 
-Hobbies
+  <div className={styles.infoCard}>
+    <h3>Hobbies</h3>
+    <ul>
+      <li>Deportes</li>
+      <li>Voluntariado</li>
+      <li>Lectura y aprendizaje</li>
+      <li>Correr</li>
+      <li>Cocinar</li>
+    </ul>
+    <h3>Idiomas</h3>
+    <ul>
+      <li>Español — Nativo</li>
+      <li>Inglés — Intermedio (B1 según MCER)</li>
+    </ul>
+  </div>
+  
 
-Aprender nuevas tecnologías
+</section>
 
-Videojuegos
-
-Crear prototipos y proyectos personales
-
-Lectura y estudio autodidacta
-
-Experiencia
-
-Desarrollo de plataformas web con JavaScript y Node.js
-
-Trabajo con modelos multimodales como Paligemma para procesamiento de documentos
-
-Automatización y análisis de datos
-
-Proyectos personales de videojuegos en Godot
-
-(Puedes expandir esto si has tenido trabajos formales o freelance.)
-
-Formación
-
-Ingeniería en Ciencias de la Computación
-Universidad Nacional de Loja
-
-Certificaciones
-
-Cursos de C# y .NET — Microsoft Learn
-
-Fundamentos de programación
-
-Conceptos de Machine Learning (varios cursos y lecturas)
-(Puedes agregar más si los tienes.)
-      {/* aquí puedes mantener las cards o seguir debajo */}
     </div>
   );
 }

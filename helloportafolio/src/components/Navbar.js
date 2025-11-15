@@ -6,8 +6,8 @@ export default function Navbar() {
     <nav className={styles.container}>
       <Link className={styles.link} to="/">Home</Link>
       <Link className={styles.link} to="/about" >About me</Link>
+      <Link className={styles.link} to="/experience">Experience</Link>
       <Link className={styles.link} to="/projects">Proyects</Link>
-      {/* <Link className={styles.link} to="/contact">Contacto</Link> */}
     </nav>
   );
 }

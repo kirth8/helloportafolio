@@ -146,11 +146,64 @@
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-/* Versión responsive */
-@media (max-width: 900px) {
-  .skillsContainer {
+/* Contenedor general */
+.infoSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  width: 100%;
+  margin-top: 60px;
+}
+
+/* Tarjetas */
+.infoCard {
+  padding: 20px;
+  position: relative;
+}
+
+/* Líneas horizontales */
+.infoCard h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #008f7a;
+}
+
+/* LISTA SIN PUNTOS */
+.infoCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* CUADROS PARA LOS <li> */
+.infoCard ul li {
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+/* COLORES INTERCALADOS */
+.infoCard ul li:nth-child(odd) {
+  background: #e9fdf9;   /* verde muy claro */
+}
+
+.infoCard ul li:nth-child(even) {
+  background: #f2f2f2;   /* gris claro */
+}
+
+/* Hover suave */
+.infoCard ul li:hover {
+  transform: translateX(4px);
+  background-color: #d7faf3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .infoSection {
     grid-template-columns: 1fr;
-    gap: 40px;
   }
 }
 

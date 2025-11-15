@@ -1,0 +1,116 @@
+.timelineSection {
+  width: 100%;
+  padding: 70px 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  font-weight: 700;
+  color: #016B61;
+}
+
+/* contenedor de la línea */
+.timeline {
+  position: relative;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+/* línea central */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #016B61;
+  transform: translateX(-50%);
+  top: 0;
+}
+
+/* bloque genérico */
+.item {
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+/* izquierda: ocupa la mitad izquierda (flow normal) */
+.left {
+  margin-left: 0;
+  padding-right: 40px;       /* separa carilla de la línea */
+  text-align: right;         /* texto alineado a la derecha */
+}
+
+/* derecha: empuja el bloque a la mitad derecha */
+.right {
+  margin-left: 50%;
+  padding-left: 40px;        /* separa carilla de la línea */
+  text-align: left;
+}
+
+/* punto circular en la linea (posicionado respecto al item) */
+.dot {
+  position: absolute;
+  top: 24px;                 /* ajusta verticalmente según contenido */
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 3px solid #016B61;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+/* dot para left: situarlo al borde derecho del bloque */
+.left .dot {
+  right: -10px;              /* queda justo sobre la línea central */
+}
+
+/* dot para right: situarlo al borde izquierdo del bloque */
+.right .dot {
+  left: -10px;
+}
+
+/* tarjeta de contenido */
+.content {
+  background: #E6F7F5;
+  border-left: 4px solid #016B61;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  display: inline-block;
+  max-width: calc(100% - 60px);
+}
+
+/* tipografía */
+.content h3 { margin: 0 0 6px; font-size: 1.15rem; color: #013d38; }
+.content h4 { margin: 4px 0; font-size: 0.98rem; color: #016B61; }
+.meta { font-size: 0.85rem; margin-bottom: 10px; opacity: 0.85; }
+
+/* imagen pequeña dentro del contenido */
+.image {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* lista */
+.content ul { padding-left: 18px; margin: 6px 0 0; }
+.content li { margin-bottom: 6px; font-size: 0.95rem; }
+
+/* responsive: apilar todo en móvil */
+@media (max-width: 900px) {
+  .timeline::before { left: 20px; }
+  .item { width: 100%; margin-left: 0 !important; padding-left: 48px; padding-right: 24px; text-align: left !important; }
+  .right, .left { margin-left: 0; text-align: left; padding-left: 48px; }
+  .left .dot, .right .dot { left: 8px; right: auto; }
+  .content { max-width: 100%; }
+}

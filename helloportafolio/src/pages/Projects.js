@@ -61,7 +61,7 @@ export default function Projects() {
               </ul>
 
               <div className={styles.buttons}>
-                <a href={p.github} target="_blank">GitHub</a>
+                <a href={p.github} target="_blank" rel="noreferrer">GitHub</a>
               </div>
             </div>
           </div>

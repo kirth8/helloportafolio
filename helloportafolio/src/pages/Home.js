@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../components/css/Home.module.css"
 import miFoto from "../assets/perfil.png"
+import videoFondo from "../assets/BackgroundHome.mp4"; 
 
 export default function Home() {
   return (
@@ -8,6 +9,17 @@ export default function Home() {
     <div className= {styles.container}>
 
       <section className= {styles.hero}>
+        {/* Video solo en la sección hero */}
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          className={styles.videoFondo}
+        >
+          <source src={videoFondo} type="video/mp4" />
+          Tu navegador no soporta el video.
+        </video>
+
           <h1 className= {styles.title}>¡Hello!, I'm Keyner Manchay</h1>
         
           <img src={miFoto} alt="Mi foto" className={styles.fotoPerfil} />

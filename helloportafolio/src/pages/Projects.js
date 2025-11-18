@@ -1,8 +1,6 @@
+import { useEffect, useRef } from "react";
 import styles from "../components/css/Projects.module.css";
 import projects from "../data/projects";
-import { useEffect, useRef } from "react";
-
-
 
 export default function Projects() {
 
@@ -38,8 +36,8 @@ export default function Projects() {
     //-- Nota: Revisar que el codigo js que este aqui se pongo en otro lado
 
     <div className={styles.container}>
-      <h1 className={styles.title}>My Projects</h1>
-      <p className={styles.subtitle}>Here are some of the things I’ve built recently</p>
+      <h1 className={styles.title}>Mis Proyectos</h1>
+      <p className={styles.subtitle}>Proyectos que cuentan mi historia como desarrollador</p>
 
       <div className={styles.list}>
         {projects.map((p, i) => (

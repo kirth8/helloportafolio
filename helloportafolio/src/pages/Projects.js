@@ -1,9 +1,72 @@
+import styles from "../components/css/Projects.module.css";
+import projects from "../data/projects";
+import { useEffect, useRef } from "react";
+
+
+
 export default function Projects() {
-  return <h2>Projectos</h2>;
+
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.visible);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    cardRefs.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
     // <p>0. Sistema de Gestión de ventas </p>  
-    // <p>1. Manjilu</p>  
-    // <p>2. Lector Accesibilidad</p>
-    // <p>3. Menu de servicios Comunitarios</p>
-    // <p>4. InstantSale</p>
-    // <p>5. Trabajo Autonomo 3</p>
+    // <p>1. Portafolio </p>  
+    // <p>2. Manjilu</p>  
+    // <p>3. Lector Accesibilidad</p> ---------Este me parece que ----------
+    // <p>4. Menu de servicios Comunitarios</p>
+    // <p>5. InstantSale</p>
+    // <p>6. Trabajo Autonomo 3</p>
+    //-- Nota: Revisar que el codigo js que este aqui se pongo en otro lado
+
+    <div className={styles.container}>
+      <h1 className={styles.title}>My Projects</h1>
+      <p className={styles.subtitle}>Here are some of the things I’ve built recently</p>
+
+      <div className={styles.list}>
+        {projects.map((p, i) => (
+          <div
+            key={i}
+            ref={(el) => (cardRefs.current[i] = el)}
+            className={styles.card}
+          >
+            <img src={p.image} alt={p.title} className={styles.image} />
+
+            <div className={styles.info}>
+              <h2>{p.title}</h2>
+              <p>{p.desc}</p>
+
+              <ul className={styles.techList}>
+                {p.tech.map((t, idx) => (
+                  <li key={idx}>{t}</li>
+                ))}
+              </ul>
+
+              <div className={styles.buttons}>
+                <a href={p.github} target="_blank">GitHub</a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }

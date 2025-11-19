@@ -136,7 +136,12 @@
   background: #f1fffb;
   border-color: #019b8a;
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+
+  z-index: 50;
+  transform: rotate(0deg) translateY(-12px) scale(1.07);
 }
+
+
 
 /* Contenedor general */
 .infoSection {
@@ -189,14 +194,56 @@
   background-color: #d7faf3;
 }
 
-/* Responsive */
+/* Estado inicial oculto */
+.hiddenLeft {
+  opacity: 0;
+  transform: translateX(-40px);
+  filter: blur(5px);
+  transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+}
+
+.hiddenRight {
+  opacity: 0;
+  transform: translateX(40px);
+  filter: blur(5px);
+  transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+}
+
+
+/* === Animaciones de entrada izquierda y derecha === */
+
+/* Estado inicial (ocultos) */
+.fadeLeft,
+.fadeRight {
+  opacity: 0;
+  filter: blur(6px);
+  transition: 
+    opacity 0.8s ease,
+    transform 0.8s ease,
+    filter 0.8s ease;
+}
+
+/* Movimiento distinto para cada lado */
+.fadeLeft {
+  transform: translateX(-45px);
+}
+
+.fadeRight {
+  transform: translateX(45px);
+}
+
+/* Estado final: visible */
+.show {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+
 @media (max-width: 768px) {
   .infoSection {
     grid-template-columns: 1fr;
   }
-}
 
-@media (max-width: 768px) {
   .inner {
     flex-direction: column;
     align-items: center;
@@ -215,4 +262,17 @@
     margin-top: 18px;
     width: 260px;
   }
+  .skillsContainer {
+    grid-template-columns: 1fr;
+    gap: 30px; /* más estético */
+  }
+
+  .leftSkills,
+  .rightSkills {
+    transform: none;  /* elimina desplazamientos laterales */
+  }
+
+  .hand {
+    justify-content: center;
+  } 
 }

@@ -1,14 +1,20 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import styles from "../components/css/About.module.css";
 import miFoto from "../assets/perfil2.jpeg";
 
 export default function About() {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setShow(true), 100); // pequeño delay elegante
+  }, []);
+  
   return (
     <div className={styles.container}>
 
       <div className={styles.inner}>
         {/* Texto a la izquierda */}
-        <div className={styles.text}>
+        <div className={`${styles.text} ${styles.fadeLeft} ${show && styles.show}`}>
           <h1 className={styles.title}>Sobre mí</h1>
           <p className={styles.paragraph}>
             Soy un desarrollador con base en Ciencias de la Computación, apasionado
@@ -27,7 +33,7 @@ export default function About() {
 
 
         {/* Imagen a la derecha */}
-        <div className={styles.imageWrap}>
+        <div className={`${styles.imageWrap} ${styles.fadeRight} ${show && styles.show}`}>
           <img src={miFoto} alt="perfil2" className={styles.image} />
         </div>
       </div>

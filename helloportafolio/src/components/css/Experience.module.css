@@ -74,8 +74,8 @@
   top: 40px;
   width: 20px;
   height: 20px;
-  background: white;
-  border: 3px solid #ffffff;
+  background: #016B61;
+  border: 3px solid #E5E9C5;
   border-radius: 50%;
   box-shadow: 0 0 8px rgba(0,0,0,0.3);
   z-index: 3;
@@ -86,7 +86,7 @@
 
 /* tarjeta */
 .content {
-  background: rgba(255,255,255,0.88);
+  background: #E5E9C5;
   border-left: 4px solid #757575;
   border-radius: 10px;
   padding: 18px;
@@ -132,6 +132,7 @@
   margin: 6px 0 0; 
   list-style: none;
   text-align: justify;
+  color: #333333;
 }
 
 .content li { 

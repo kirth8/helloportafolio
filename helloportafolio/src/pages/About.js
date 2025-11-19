@@ -17,14 +17,14 @@ export default function About() {
         <div className={`${styles.text} ${styles.fadeLeft} ${show && styles.show}`}>
           <h1 className={styles.title}>Sobre mí</h1>
           <p className={styles.paragraph}>
-            Soy un desarrollador con base en Ciencias de la Computación, apasionado
-            por resolver problemas usando tecnologías modernas. Tengo experiencia 
-            construyendo plataformas web utilizando Node.js, Flask, Django, y
-            trabajando con modelos de machine learning multimodales como Paligemma.
+            Soy un desarrollador con base en la Ingeniería en Ciencias de la Computación, 
+            apasionado por resolver problemas complejos mediante tecnologías modernas. Mi 
+            enfoque combina soluciones web robustas con implementaciones de inteligencia 
+            artificial, buscando siempre crear experiencias digitales innovadoras y eficientes.
 
-            Actualmente estoy aprendiendo C# y explorando el desarrollo de videojuegos
-            con Godot, con el objetivo de construir juegos como parte de mi 
-            crecimiento profesional.
+            Mi experiencia se centra en el desarrollo full-stack, integrando tanto frontend como
+            backend con herramientas de vanguardia para entregar productos escalables y de alto 
+            rendimiento.
           </p>
         </div>
 
@@ -44,11 +44,11 @@ export default function About() {
     <h2 className={styles.groupTitle}>Habilidades Técnicas</h2>
 
     <div className={styles.hand}>
-      <div className={styles.card} style={{ "--i": 0 }}>Frontend: JavaScript, React</div>
+      <div className={styles.card} style={{ "--i": 0 }}>Frontend: React, javaScript</div>
       <div className={styles.card} style={{ "--i": 1 }}>Backend: Node.js, Django, Flask</div>
       <div className={styles.card} style={{ "--i": 2 }}>Bases de datos: MySQL, MongoDB</div>
-      <div className={styles.card} style={{ "--i": 3 }}>Git, Linux, APIs REST</div>
-      <div className={styles.card} style={{ "--i": 4 }}>C#, Godot — Android</div>
+      <div className={styles.card} style={{ "--i": 3 }}>C, Java</div>
+      <div className={styles.card} style={{ "--i": 4 }}>Git, APIs REST, ML</div>
     </div>
   </div>
 

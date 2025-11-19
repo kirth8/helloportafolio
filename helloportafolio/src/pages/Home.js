@@ -9,7 +9,6 @@ export default function Home() {
     <div className= {styles.container}>
 
       <section className= {styles.hero}>
-        {/* Video solo en la sección hero */}
         <video 
           autoPlay 
           muted 

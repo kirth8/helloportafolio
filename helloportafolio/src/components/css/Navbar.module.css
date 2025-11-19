@@ -8,8 +8,8 @@
 
   position: sticky;   /* Se queda pegado al hacer scroll */
   top: 0;             
-  z-index: 1000;      /* Asegura que quede encima de todo */
-  backdrop-filter: blur(10px); /* efecto vidrio */
+  z-index: 1000;      
+  backdrop-filter: blur(10px); 
 
 }
 

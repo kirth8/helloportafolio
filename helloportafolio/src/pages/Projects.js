@@ -26,14 +26,6 @@ export default function Projects() {
   }, []);
 
   return (
-    // <p>0. Sistema de Gestión de ventas </p>  
-    // <p>1. Portafolio </p>  
-    // <p>2. Manjilu</p>  
-    // <p>3. Lector Accesibilidad</p> ---------Este me parece que ----------
-    // <p>4. Menu de servicios Comunitarios</p>
-    // <p>5. InstantSale</p>
-    // <p>6. Trabajo Autonomo 3</p>
-    //-- Nota: Revisar que el codigo js que este aqui se pongo en otro lado
 
     <div className={styles.container}>
       <h1 className={styles.title}>Mis Proyectos</h1>

@@ -1,16 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
 .container {
   position: relative;
 }
 
-/* Video que actúa como background-image */
 .videoFondo {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Cubre toda la sección hero sin distorsión */
-  z-index: -1; /* Detrás del contenido de hero */
+  object-fit: cover;
+  z-index: -1;
 }
 
 .hero {
@@ -46,22 +51,21 @@
   height: 190px;
   border-radius: 50%;       
   border: 2.5px solid #016B61; 
-  object-fit: cover;        /* Ajuste limpio */
+  object-fit: cover;
 
   position: absolute;
-  /*top: 33vh;                /* Mueve la imagen en Y */
+  
   left: 50%;
-  bottom: -95px;         /* La mitad de la imagen baja a la parte blanca */
+  bottom: -95px;    
   transform: translateX(-50%);
 
   background: white;        
-  z-index: 10;              /* Para que esté encima de todo */
+  z-index: 10;      
 
 }
 
 .content {
-  /* padding: 40px;
-  padding-top: 7%; */
+  /* padding: 40px;*/
   padding: 95px 90px 20px;
   background-color: rgb(255, 255, 255);
   color: #333333;
@@ -85,9 +89,9 @@
 .gridHabilidades {
   display: grid;  
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;                   /* Espacio entre las cajas */
+  gap: 20px; 
   max-width: 1000px;
-  margin: 0 auto;              /* Centrar  */
+  margin: 0 auto;       /* Centrar  */
 }
 
 .skill {
@@ -101,14 +105,14 @@
 
 
 .skill:hover {
-  transform: scale(1.05);      /* Se agranda un poquito */
+  transform: scale(1.05);     
   background: #70B2B2;
 }
 
 .skill img {
-  width: 60px;                       /* Tamaño del icono */
+  width: 60px;               
   height: 60px;
-  margin-bottom: 10px;               /* Espacio entre icono y texto */
+  margin-bottom: 10px;       
 }
 
 .skill p {

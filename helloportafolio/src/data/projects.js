@@ -1,9 +1,9 @@
 const projects = [
   {
-    title: "VSCompro",
+    title: "DevAPIStore",
     desc: "Sistema de gestión de ventas de todo tipo de categoría.",
     tech: ["React", "HTML", "JavaScript", "CSS Modules", "MongoDB Cloud", "API REST"],
-    github: "#",
+    github: "https://github.com/kirth8/DevAPIStore",
     image: "/img/EnProceso.JPG",
   },
   {

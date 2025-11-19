@@ -42,16 +42,11 @@
   align-items: center;
   justify-content: center;
 
-  /* font-weight: 200;  */
   transform: scaleX(0.3) scaleY(1.4);
 
-
-  
   line-height: 6rem;        
-  margin: 0 30px;           /* separación entre texto e imagen */
+  margin: 0 30px;          
 }
-
-
 
 /* contenedor de la imagen (derecha) */
 .imageWrap {
@@ -60,7 +55,6 @@
   justify-content: center;
 }
 
-/* imagen con estilo */
 .image {
   width: 400px;
   max-width: 100%;
@@ -77,7 +71,6 @@
   margin-top: 40px;
 }
 
-/* Títulos */
 .groupTitle {
   text-align: center;
   color: #016B61;
@@ -87,7 +80,6 @@
   padding-bottom: 30px;
 }
 
-/* Contenedor estilo "mano de cartas" */
 .hand {
   display: inline-grid;
   counter-set: card 0;
@@ -155,7 +147,6 @@
   margin-top: 60px;
 }
 
-/* Tarjetas */
 .infoCard {
   padding: 20px;
   position: relative;
@@ -169,14 +160,12 @@
   border-bottom: 2px solid #008f7a;
 }
 
-/* LISTA SIN PUNTOS */
 .infoCard ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* CUADROS PARA LOS <li> */
 .infoCard ul li {
   padding: 10px 14px;
   margin-bottom: 8px;
@@ -187,11 +176,11 @@
 
 /* COLORES INTERCALADOS */
 .infoCard ul li:nth-child(odd) {
-  background: #e9fdf9;   /* verde muy claro */
+  background: #e9fdf9;   
 }
 
 .infoCard ul li:nth-child(even) {
-  background: #f2f2f2;   /* gris claro */
+  background: #f2f2f2;  
 }
 
 /* Hover suave */
@@ -207,7 +196,6 @@
   }
 }
 
-/* RESPONSIVE: apilar en móvil */
 @media (max-width: 768px) {
   .inner {
     flex-direction: column;

@@ -28,8 +28,8 @@
 /* --- CARD --- */
 .card {
   display: flex;
-  background: #ff4f4f;
-  border: 1px solid #222;
+  background: #E5E9C5;
+  border: 0.5px solid #969696;
   padding: 18px;
   border-radius: 14px;
   opacity: 0;
@@ -38,12 +38,12 @@
   overflow: hidden;
 
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  box-shadow: 0px 3px 10px rgba(0,0,0,0.09);
+  box-shadow: 0px 3px 30px rgba(0,0,0,0.09);
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0px 8px 22px rgba(0,0,0,0.17);
+  box-shadow: 0px 8px 40px rgba(0,0,0,0.17);
 }
 
 /* Animación de aparición */
@@ -55,7 +55,7 @@
 /* --- IMAGEN --- */
 .image {
   width: 240px;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
   border-radius: 10px;
   margin-right: 18px;
@@ -82,14 +82,27 @@
 
 /* --- LISTA DE TECNOLOGÍAS --- */
 .techList {
-  margin: 0 0 14px 0;
-  padding-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+  padding: 0;
+  list-style: none;
 }
 
 .techList li {
-  list-style: disc;
-  margin-bottom: 4px;
-  font-size: 0.95rem;
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  background: #eef1f1;
+  color: #333;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.techList li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
 }
 
 /* --- BOTONES --- */
@@ -99,17 +112,30 @@
 }
 
 .buttons a {
-  background: #2b7cff;
-  padding: 8px 14px;
-  border-radius: 8px;
+  background: linear-gradient(135deg, #70B2B2, #016B61);
+  padding: 8px 16px;
+  border-radius: 10px;
   text-decoration: none;
   color: white;
   font-size: 0.95rem;
-  transition: background 0.2s ease;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  box-shadow: 0 4px 12px rgba(0, 50, 150, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.25s ease;
 }
 
 .buttons a:hover {
-  background: #1a5cd8;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 50, 150, 0.35);
+}
+
+.buttons a:active {
+  transform: translateY(-1px);
 }
 
 /* --- RESPONSIVE --- */
@@ -123,8 +149,8 @@
   }
 
   .image {
-    width: 180px;
-    height: 140px;
+    width: 230px;
+    height: 210px;
   }
 }
 

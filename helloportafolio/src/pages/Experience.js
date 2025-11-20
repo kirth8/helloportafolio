@@ -3,7 +3,7 @@ import styles from "../components/css/Experience.module.css";
 import experiences from "../data/experience";
 
 export default function Experience() {
-  const [bgImage, setBgImage] = useState("img/Carsat.jpg");
+  const [bgImage, setBgImage] = useState(`${process.env.PUBLIC_URL}/img/Carsat.jpg`);
   const itemsRef = useRef([]);
 
   // Asignar observador para detectar qué tarjeta está a la vista

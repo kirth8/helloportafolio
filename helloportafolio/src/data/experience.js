@@ -9,7 +9,7 @@ const experiences = [
       "Gestión del hosting en Bluehost para garantizar disponibilidad.",
       "Instalación y configuración de sistemas GPS para vehículos."
     ],
-    image: "img/Carsat.jpg"
+    image: `${process.env.PUBLIC_URL}/img/Carsat.jpg`,
   },
   {
     title: "Universidad Nacional de Loja (UNL)",
@@ -22,7 +22,7 @@ const experiences = [
       "Evalué modelos multimodales (Florence 2, Paligemma, Chameleon).",
       "Desarrollé una API REST con Paligemma y un frontend accesible con Flask."
     ],
-    image: "img/JetsonNano.jpg"
+    image: `${process.env.PUBLIC_URL}/img/JetsonNano.jpg`,
   },
   {
     title: "UNIVERSIDAD TÉCNICA PARTICULAR DE LOJA (UTPL)",
@@ -35,7 +35,7 @@ const experiences = [
       "Se creo una plataforma web con Flask para la implementación del modelo creado.",
       "Se obtuvo el primer lugar en II Convocatoria de Retos de Innovación Abierta Ecuador Sustentable 2030 "
     ],
-    image: "img/Manjilu.jpeg"
+    image: `${process.env.PUBLIC_URL}/img/Manjilu.jpeg`,
   },
   {
     title: "Empresa NODO Cía. Ltda.",
@@ -48,7 +48,7 @@ const experiences = [
       "Mejoré la arquitectura backend y los diagramas funcionales.",
       "Optimicé consultas a MongoDB para mayor eficiencia."
     ],
-    image: "img/Nodo.jpg"
+    image: `${process.env.PUBLIC_URL}/img/Nodo.jpg`,
   }
 ];
 

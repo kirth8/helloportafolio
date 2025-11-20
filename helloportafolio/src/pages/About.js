@@ -6,7 +6,7 @@ export default function About() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setShow(true), 100); // pequeño delay elegante
+    setTimeout(() => setShow(true), 100); // pequeño delay
   }, []);
   
   return (

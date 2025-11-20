@@ -4,9 +4,7 @@ const projects = [
     desc: "Sistema de gestión de ventas de todo tipo de categoría.",
     tech: ["React", "HTML", "JavaScript", "CSS Modules", "MongoDB Cloud", "API REST"],
     github: "https://github.com/kirth8/DevAPIStore",
-    image: `${process.env.PUBLIC_URL}/img/EnProceso.JPG`,
-    // image: "../../public/img/EnProceso.JPG",
-    // image: "/img/EnProceso.JPG",
+    image: `${process.env.PUBLIC_URL}/img/EnProceso.jpg`,
   },
   {
     title: "Portfolio Website",

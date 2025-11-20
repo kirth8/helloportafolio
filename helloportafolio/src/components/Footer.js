@@ -15,7 +15,7 @@ export default function Footer() {
         </a>
 
         <a href="https://linkedin.com/in/keyner-alexis-manchay-montoya-319aa9211" target="_blank" rel="noopener noreferrer">
-          <img src={`${process.env.PUBLIC_URL}/icons/linkedin.png`} alt="LinkedIn" />
+          <img src={`${process.env.PUBLIC_URL}/icons/Linkedin.png`} alt="LinkedIn" />
         </a>
 
         <a href="https://www.facebook.com/profile.php?id=100087275829274" target="_blank" rel="noopener noreferrer">

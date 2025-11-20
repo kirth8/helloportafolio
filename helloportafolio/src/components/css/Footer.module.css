@@ -55,3 +55,26 @@
   display: inline-block;
   object-fit: contain;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footerLeft,
+  .footerRight {
+    font-size: 0.85rem;
+  }
+
+  .footerCenter {
+    order: -1; /* opcional: iconos arriba si quieres */
+  }
+
+  .cvButton {
+    width: 100%;          /* hace que no se salga */
+    max-width: 260px;     /* no crece demasiado */
+    justify-content: center;
+  }
+}

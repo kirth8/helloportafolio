@@ -130,3 +130,26 @@ body {
     transform: translateY(0); 
   }
 }
+
+@media (max-width: 992px) {
+  .gridHabilidades {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gridHabilidades {
+    grid-template-columns: 1fr; 
+    gap: 12px;
+  }
+
+  .habilidades {
+    padding: 50px 20px;
+  }
+
+  .skill img {
+    width: 50px;
+    height: 50px;
+  }
+}

@@ -29,7 +29,7 @@ export default function Projects() {
 
     <div className={styles.container}>
       <h1 className={styles.title}>Mis Proyectos</h1>
-      <p className={styles.subtitle}>Proyectos que cuentan mi historia como desarrollador</p>
+      <p className={styles.subtitle}>Proyectos que he realizado a lo largo de mi historia como desarrollador</p>
 
       <div className={styles.list}>
         {projects.map((p, i) => (

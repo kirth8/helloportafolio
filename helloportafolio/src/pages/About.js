@@ -18,9 +18,9 @@ export default function About() {
           <h1 className={styles.title}>Sobre mí</h1>
           <p className={styles.paragraph}>
             Soy un desarrollador con base en la Ingeniería en Ciencias de la Computación, 
-            apasionado por resolver problemas complejos mediante tecnologías modernas. Mi 
-            enfoque combina soluciones web robustas con implementaciones de inteligencia 
-            artificial, buscando siempre crear experiencias digitales innovadoras y eficientes.
+            me gusta resolver problemas que tenga las personas con tecnologías modernas. Mi 
+            enfoque combina soluciones web con implementaciones de inteligencia 
+            artificial, buscando siempre crear buenas experiencias digitales y eficientes.
 
             Mi experiencia se centra en el desarrollo full-stack, integrando tanto frontend como
             backend con herramientas de vanguardia para entregar productos escalables y de alto 

@@ -2,9 +2,9 @@ const projects = [
   {
     title: "DevAPIStore",
     desc: "Sistema de gestión de ventas de todo tipo de categoría.",
-    tech: ["React", "HTML", "JavaScript", "CSS Modules", "MongoDB Cloud", "API REST"],
+    tech: ["Next.js", "HTML", "JavaScript", "Tailwind CSS", "MongoDB Cloud Atlas", "API REST"],
     github: "https://github.com/kirth8/DevAPIStore",
-    image: `${process.env.PUBLIC_URL}/img/EnProceso.jpg`,
+    image: `${process.env.PUBLIC_URL}/img/DevAPIStore.JPG`,
   },
   {
     title: "Portfolio Website",

@@ -9,7 +9,8 @@ import styles from "./App.module.css";
 
 export default function App() {
   return (
-    <Router basename="/helloportafolio">
+    // <Router basename="/helloportafolio">
+    <Router basename="/">
       <Navbar />
       <div className={styles.container}>
         <Routes>
@@ -21,6 +22,6 @@ export default function App() {
       </div>
       <Footer />
     </Router>
-    
+
   );
 }

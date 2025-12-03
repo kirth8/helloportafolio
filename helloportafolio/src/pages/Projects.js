@@ -52,6 +52,9 @@ export default function Projects() {
 
               <div className={styles.buttons}>
                 <a href={p.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+                {p.deploy && (
+                  <a href={p.deploy} target="_blank" rel="noopener noreferrer">Visitar</a>
+                )}
               </div>
             </div>
           </div>

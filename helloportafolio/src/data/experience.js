@@ -3,7 +3,7 @@ const experiences = [
     title: "CARSAT Rastreo Satelital",
     role: "Soporte Técnico y Mantenimiento Web",
     location: "Machala, Ecuador",
-    date: "03/2025 - Actualidad",
+    date: "03/2025 - 06/2025",
     description: [
       "Diagnóstico y resolución de bugs en aplicaciones web privadas.",
       "Gestión del hosting en Bluehost para garantizar disponibilidad.",

@@ -51,7 +51,9 @@ export default function Projects() {
               </ul>
 
               <div className={styles.buttons}>
+                {p.github && (
                 <a href={p.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+                )}
                 {p.deploy && (
                   <a href={p.deploy} target="_blank" rel="noopener noreferrer">Visitar</a>
                 )}

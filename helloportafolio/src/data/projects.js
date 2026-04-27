@@ -1,5 +1,13 @@
 const projects = [
   {
+    title: "Pingüi: Learn Through Stories",
+    desc: "Aplicación móvil para el aprendizaje de palabras mediante historias multilingüe.",
+    tech: ["Expo", "Render", "TypeScript", "Supabase", "DeepSeek", "API REST"],
+    // github: "https://github.com/kirth8/DevAPIStore",
+    deploy: "https://play.google.com/store/apps/details?id=com.pingui.learningwords",
+    image: `${process.env.PUBLIC_URL}/img/Pingui.JPG`,
+  },
+  {
     title: "DevAPIStore",
     desc: "Sistema de gestión de ventas de todo tipo de categoría.",
     tech: ["Next.js", "HTML", "JavaScript", "Tailwind CSS", "MongoDB Cloud Atlas", "API REST"],
